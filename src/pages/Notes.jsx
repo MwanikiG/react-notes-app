@@ -27,13 +27,19 @@ export const Notes = () => {
   }
 
   return(
+    <>
+    <div>
+      <h1>🤺My TO-DO List</h1>
+    </div>
+
   <div>
       <NotesForm setNotes={setNotes } />
     <div>
       {notes.map(note => (
-        <Note key={note.$id} noteData={note} />
+        <Note key={note.$id} setNotes ={setNotes} noteData={note} />
       ))}
     </div>
   </div>
+  </>
   );
 }

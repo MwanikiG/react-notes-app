@@ -5,13 +5,20 @@ import { Notes } from "./pages/Notes"
 
 function App() {
 
-  return <BrowserRouter>
+  return (
+    <div id="app" >
+      <div id="container">
+        <BrowserRouter>
       <Routes>
               <Route element={<Notes/>} path="/" />
               <Route element={<LoginRegister/>} path="/login" />
       </Routes>
   
   </BrowserRouter>
+      </div>
+    </div>
+  
+  )
 }
 
 export default App
